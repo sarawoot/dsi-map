@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DSIMAP Development</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="content-script-type" content="text/javascript">
+
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="extjs4/resources/css/ext-all.css" />
+  <link rel="stylesheet" type="text/css" href="extjs4/examples/shared/example.css" />
+  <link rel="stylesheet" type="text/css" href="geoext2/resources/css/tree.css">
+  <link rel="stylesheet" type="text/css" href="dsi.css">
+
+  <link href="http://www.google.com/help/maps/streetview/css/streetview-style.css" rel="stylesheet">
+  <style type="text/css">
+
+    .add {
+        background-image:url(extjs4/examples/shared/icons/fam/add.gif) !important;
+    }
+    .remove {
+        background-image:url(extjs4/examples/shared/icons/fam/delete.gif) !important;
+    }
+    .grid {
+        background-image:url(extjs4/examples/shared/icons/fam/grid.png) !important;
+    }
+
+  </style>
+
+  <script type="text/javascript" charset="utf-8" src="extjs4/ext-all.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"> </script>
+  <script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>
+
+  <!-- script src="http://api.maps.yahoo.com/ajaxymap?v=3.0&appid=euzuro-openlayers"></script -->
+
+  <!-- script src="OpenLayers-2.12/OpenLayers-debug.js"></script -->
+  <script src="OpenLayers-2.12/OpenLayers-dsi.js"></script>
+
+  <!-- OPL missing DeleteFeature.js must download from internet -->
+  <script src="OpenLayers-2.12/lib/OpenLayers/Control/DeleteFeature.js"></script>
+
+  <!-- script src="GeoExt.ux.GoogleEarthPanel.js"></script-->
+  <script type="text/javascript" src="map_utils.js"></script>
+
+  <!-- Add Print Map Function -->
+  <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery.printElement.min.js"></script>
+
+  <!-- script type="text/javascript" src="http://demo.opengeo.org/geoserver/pdf/info.json?var=printCapabilities"></script -->
+  <script type="text/javascript" src="js/info.json?var=printCapabilities"></script>
+
+  <!-- Core Script -->
+  <script type="text/javascript" src="dsi.js"></script>
+
+  <!-- Add Buffer script -->
+  <script type="text/javascript" src="js/GeodesicPolygon.js"></script>
+  <script type="text/javascript" src="js/GeodesicTools.js"></script>
+
+  <!-- Add Marquee script -->
+  <script type="text/javascript" src="js/jquery.marquee.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55545234-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
+<body>
+  <div id='google_street'></div>
+</body>
+</html>
